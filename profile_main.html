@@ -1,110 +1,154 @@
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <!-- Make website accessible on mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio Website</title>
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" 
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> 
 
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-            }
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
 
-            .topnav {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 60px;
-                width: 100%;
-                background: rgb(56, 55, 55);
-            }
+        <!-- Link css file -->
+        <link rel="stylesheet" href="style.css">
 
-            .topnav ul {
-                list-style: none;
-            }
-
-            .topnav ul li {
-                float: left;
-                width: 140px;
-                height: 60px;
-                text-align: center;
-                line-height: 50px;
-            }
-
-            .topnav ul li a {
-                color: white;
-                display: block;
-                text-decoration: none;
-                font-size: 17px;
-                padding: 5px;
-            }
-
-            .topnav a:hover {
-                background-color: rgb(7, 219, 216);
-                color: white;
-                transition: 700ms ease;
-            }
-
-            /* .topnav a.active {
-                background-color: #48bda6;
-                color: white;
-            } */
-
-            .dropdown-menu ul li {
-                background: rgb(56, 55, 55);
-                display: none;
-                animation: animate ls ease;
-            }
-
-            .dropdown-menu ul li a {
-                color: #fff;
-            }
-
-            .dropdown-menu ul li a:hover {
-                background: rgb(7, 219, 216);
-                color: white;
-            }
-
-            .topnav ul li:hover ul li {
-                display: block;
-            }
-
-            body {
-                background: whitesmoke;
-                background-position: center center;
-                height: 100vh;
-                padding: 50px;
-                ::-webkit-scrollbar {
-                width: 10px;
-                }
-
-                ::-webkit-scrollbar-track {
-                    border-radius: 5px;
-                    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
-                }
-
-                ::-webkit-scrollbar-thumb {
-                    border-radius: 5px;
-                    box-shadow: lightgray;
-                }
-
-                ::-webkit-scrollbar-thumb:hover {
-                    background: #555; 
-                }
-            }
-
-        </style>
     </head>
     <body>
-        <div class="topnav">
-           <ul>
-                <li class="dropdown-menu"><a href="#">About</a>
-                    <ul>
-                        <li><a href="#">The Website</a></li>
-                    </ul>
-                </li>
-                <li><a href="">Help</a></li>
-           </ul>
-        </div>
-        <img src="justice.pdf" alt="a picture of Casey Reyes" height="400px" width="350px" style="display: block; margin-right: auto; margin-left: 0%; margin-top: 5%;">
-        <!-- <h1>Casey Reyes</h1> -->
+        <!-- The Header -->
+        <header>
+            <div class="logo">
+                <img src="#" alt="some image">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">My Work</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- The Introduction -->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I am <strong>Casey Reyes</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Computer Science undergard at UW-Madison</p>
+            <img src="casey_pic_1.jpg" height="370px" width="330px" alt="a picture of Casey Reyes">
+        </section>
+        
+        
+        <!-- My services -->
+        <section class="my-services" id="services">
+            <h2 class="section__title section__title--services">What I do</h2>
+            <div class="services">
+                <div class="service">
+                    <h3></h3>
+                    <p></p>
+                </div> <!-- / service -->
+                
+                <div class="service">
+                    <h3></h3>
+                    <p></p>
+                </div> <!-- / service -->
+                
+                <div class="service">
+                    <h3></h3>
+                    <p></p>
+                </div> <!-- / service -->
+            </div> <!-- / services -->
+            
+            <a href="#work" class="btn">My Work</a>
+        </section>
+
+        <!-- About me -->
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">Who I am</h2>
+            <p class="section__subtitle section__subtitle--about"></p>
+            
+            <div class="about-me__body">
+                <p></p>
+                <p></p>
+            </div>
+            
+            <img src="#" alt="Another picture of Casey I guess">
+         </section>
+         
+         <!-- My Work -->
+         <section class="my-work" id="work">
+             <h2 class="section__title">My work</h2>
+             <p class="section__subtitle"></p>
+             
+             <div class="portfolio">
+                 <!-- Portfolio item 01 -->
+                 <a href="#" class="portfolio__item">
+                     <img src="#" alt="" class="portfolio__img">
+                 </a>
+                 
+                 <!-- Portfolio item 02 -->
+                 <a href="#" class="portfolio__item">
+                     <img src="#" alt="" class="portfolio__img">
+                 </a>
+                 
+                 <!-- Portfolio item 03 -->
+                 <a href="#" class="portfolio__item">
+                     <img src="#" alt="" class="portfolio__img">
+                 </a>
+                 
+                 <!-- Portfolio item 04 -->
+                 <a href="#" class="portfolio__item">
+                     <img src="#" alt="" class="portfolio__img">
+                 </a>
+                 
+                 <!-- Portfolio item 05 -->
+                 <a href="#" class="portfolio__item">
+                     <img src="#" alt="" class="portfolio__img">
+                 </a>
+                 
+                 <!-- Portfolio item 06 -->
+                 <a href="#" class="portfolio__item">
+                     <img src="#" alt="" class="portfolio__img">
+                 </a>
+                 
+                 <!-- Portfolio item 07 -->
+                 <a href="#" class="portfolio__item">
+                     <img src="#" alt="" class="portfolio__img">
+                 </a>
+                 
+                 <!-- Portfolio item 08 -->
+                 <a href="#" class="portfolio__item">
+                     <img src="#" alt="" class="portfolio__img">
+                 </a>
+                 
+                 <!-- Portfolio item 09 -->
+                 <a href="#" class="portfolio__item">
+                     <img src="#" alt="" class="portfolio__img">
+                 </a>
+                 
+                 <!-- Portfolio item 0 0-->
+                 <a href="#" class="portfolio__item">
+                     <img src="#" alt="" class="portfolio__img">
+                 </a>
+             </div>
+         </section>
+         
+         
+         <!-- Footer -->
+         <footer>
+             <a href="mailto:reyescaseym@gmail.com" class="footer__link">reyescaseym@gmail.com</a>
+             <ul class="social-list">
+                 <li class="social-list__item"><a class="social-list__link" href="https://codepen.io">a</a></li>
+                 <li class="social-list__item">b<a class="social-list__link" href="http://dribbble.com"></a></li>
+                 <li class="social-list__item"><a class="social-list__link" href="https://twitter.com">c</a></li>
+                 <li class="social-list__item"><a class="social-list__link" href="https://github.com">d</a></li>
+             </ul>
+         </footer>
     </body>
 </html>
